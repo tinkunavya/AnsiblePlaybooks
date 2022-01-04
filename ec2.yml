@@ -9,8 +9,8 @@
     security_group:
     image: "ami-002068ed284fb165b"
     region: us-east-2
-    user_access_key: "xxxxxxxxxxxxxxxxxx"
-    user_secret_key: "xxxxxxxxxxxxxxxxx"
+    user_access_key: "xxxxxxxxxxxxxx"
+    user_secret_key: "xxxxxxxxxxxxxxxx"
 
   tasks:
     - name: startup new instance
@@ -25,3 +25,7 @@
          vpc_subnet_id: "subnet-a41b38e8"
          aws_access_key: "{{ user_access_key }}"
          aws_secret_key: "{{ user_secret_key }}"
+      register: ec2
+      
+    - debug:
+        var: ec2.instances[0].public_ip

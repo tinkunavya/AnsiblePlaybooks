@@ -4,13 +4,13 @@
   vars:
   gather_facts: False
   vars:
-    keypair: "ansible"
+    keypair: ansible
     instance_type: t2.micro
     security_group:
     image: "ami-002068ed284fb165b"
     region: us-east-2
-    user_access_key: "xxxxxxxxxxxxxx"
-    user_secret_key: "xxxxxxxxxxxxxxxx"
+    user_access_key: "xxxxxxxxxxxxxxxxxx"
+    user_secret_key: "xxxxxxxxxxxxxxxxx"
 
   tasks:
     - name: startup new instance

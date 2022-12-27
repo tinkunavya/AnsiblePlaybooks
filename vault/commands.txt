@@ -1,0 +1,11 @@
+ansible-playbook ansible-vault.yml  --ask-vault-pass
+
+
+  ansible-vault encrypt password.yml 
+  cat password.yml 
+  ansible-vault decrypt password.yml 
+  cat password.yml 
+  ansible-vault view password.yml 
+  ansible-vault edit password.yml 
+  
+  ansible-vault rekey password.yml 

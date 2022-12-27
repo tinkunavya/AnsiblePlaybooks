@@ -1,0 +1,17 @@
+---
+# this playbook for tags example
+# command to execute: ansible-playbook tags.yml --tags first
+- name: tags
+  hosts: master
+  tasks:
+    - debug:
+        msg: " this is first task"
+      tags: first
+
+    - debug:
+        msg: " this is second task"
+      tags: second
+
+    - debug:
+        msg: "this is third taks"
+      tags: third

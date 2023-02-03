@@ -1,0 +1,35 @@
+sudo yum install python3 -y
+sudo yum –y install python3-pip
+sudo pip3 install boto3
+pip3 install --extra-index-url https://pypi.python.org/simple boto3
+pip install boto3
+pip install botocore==1.18.6
+pip install awscli
+pip install boto3==1.21.0
+
+Not using: /etc/ansible/hosts
+/etc/ansible/ansible.cfg with own config
+
+Create an inventory directory under /opt and cd into the directory.
+
+sudo mkdir -p /opt/ansible/inventory
+cd /opt/ansible/inventory
+
+sudo vi aws_ec2.yaml
+
+---
+plugin: aws_ec2
+aws_access_key: AKIARF6IK2XSBYXYMD6W
+aws_secret_key: 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
+keyed_groups:
+  - key: tags
+    prefix: tag
+	
+sudo vi /etc/ansible/ansible.cfg	
+enable_plugins = aws_ec2
+
+
+ansible-inventory -i /opt/ansible/inventory/aws_ec2.yaml --list
+
+
+

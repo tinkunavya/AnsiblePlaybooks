@@ -4,14 +4,27 @@
 - name: tags
   hosts: master
   tasks:
-    - debug:
-        msg: " this is first task"
+    - name:
+      file:
+        state: touch
+        path: /home/ansible/{{ item }}
+        with_items:
+          - file_no_1
+          - file_no_2
+          - file_no_3
       tags: first
 
-    - debug:
-        msg: " this is second task"
-      tags: second
-
-    - debug:
+    - name: "Install Common Libraries from CentOS mirror"
+      yum: state=present name={{ item }}
+      with_items:
+        - sudo
+        - vim
+        - gcc
+        - gcc-c++
+        - autoconf
+        - tar
+       tags: second
+       
+     - debug:
         msg: "this is third taks"
       tags: third

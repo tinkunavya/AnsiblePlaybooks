@@ -1,10 +1,5 @@
 --- # Installing Httpd Server and Starting it
 -   hosts: servers
-    remote_user: ansible
-    become: yes
-    become_method: sudo
-    connection: ssh
-    gather_facts: yes
     tasks:
     - name: Install httpd server on centos
       yum:

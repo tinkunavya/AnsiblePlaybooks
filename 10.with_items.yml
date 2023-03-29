@@ -1,5 +1,5 @@
 --- # Multiple Itmes
--  hosts: master
+-  hosts: all
    tasks: 
    - name: "Install Common Libraries from CentOS mirror"
      yum: state=present name={{ item }}

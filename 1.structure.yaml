@@ -1,5 +1,5 @@
 --- # Installing Httpd Server and Starting it
--   hosts: servers
+-   hosts: master
     tasks:
     - name: Install httpd server on centos
       yum:

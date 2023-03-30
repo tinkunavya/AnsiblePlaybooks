@@ -1,6 +1,5 @@
 --- # Upload the Shell Script to Remote Host and Run it.
--  hosts: servers
- 
+-  hosts: master
    tasks: 
    -  name: Run the program
       shell: /home/ansible/hostname.sh

@@ -1,14 +1,7 @@
 --- # Debugging
 -   hosts: '{{ myHosts }}'
-    remote_user: ansible
-    become: yes
-    become_method: sudo
-    connection: ssh
-    gather_facts: '{{ gather }}'
     vars:
-        myHosts: servers
-        gather: yes
-        pkg: telnet
+        myHosts: agents
     tasks:
     - shell: cat /etc/ansible/hosts
       register: hosts

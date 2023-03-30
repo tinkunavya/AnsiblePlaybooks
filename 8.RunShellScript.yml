@@ -2,6 +2,6 @@
 -  hosts: master
    tasks: 
    -  name: Run the program
-      shell: /home/ansible/hostname.sh
+      shell: /opt/hostname.sh
       register: result
    -  debug: msg="stdout={{ result }}"

@@ -1,5 +1,5 @@
 --- #
-- hosts: servers
+- hosts: all
   tasks:
   - name: Querying for Telnet Install
     yum: pkg=nmap state=present

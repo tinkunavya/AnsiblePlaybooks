@@ -1,7 +1,5 @@
 ---# Install http server and Deploy the Html File
--  hosts: servers
-   remote_user: ansible
-   become: yes
+-  hosts: master
    tasks: 
       - name: Install Apache Server
         yum:

@@ -19,7 +19,6 @@
          image: "{{ image }}"
          wait: true
          region: "{{ region }}"
-         assign_public_ip: yes
          aws_access_key: "{{ user_access_key }}"
          aws_secret_key: "{{ user_secret_key }}"
       register: ec2

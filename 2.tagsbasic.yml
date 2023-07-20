@@ -1,4 +1,4 @@
---- # command to execute: ansible-playbook tags.yml --tags first
+--- # command to execute: ansible-playbook 02.tags.yml --tags first
 -   hosts: master
     tasks:
     - debug:

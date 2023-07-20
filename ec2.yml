@@ -6,7 +6,7 @@
   vars:
     keypair: ansible
     instance_type: t2.micro
-    image: "ami-002068ed284fb165b"
+    image: "ami-04823729c75214919"
     region: us-east-1
     user_access_key: "xxxxxxxxxxxxxx"
     user_secret_key: "xxxxxxxxxxxxxxxx"

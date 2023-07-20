@@ -1,9 +1,0 @@
---- # Debugging
--   hosts: '{{ myHosts }}'
-    vars:
-        myHosts: agents
-    tasks:
-    - shell: cat /etc/ansible/hosts
-      register: hosts
-    - debug: msg="Hosts File is empty"  
-      when: hosts.stdout == ""
